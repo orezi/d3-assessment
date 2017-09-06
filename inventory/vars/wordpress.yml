@@ -1,7 +1,4 @@
 #firewall vars
-web1_ip: "192.168.56.108"
-web2_ip: "192.168.56.109"
-
 firewall_allowed_tcp_ports:
   - "22"
   - "80"

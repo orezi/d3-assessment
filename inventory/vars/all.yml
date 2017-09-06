@@ -4,10 +4,10 @@ mysql_replication_user:
     password: wp_db_password
     priv: "*.*:ALL"
 
-mysql_replication_master: '192.168.56.110'
+mysql_replication_master: '192.168.56.110' #ip of server to be used as mysql master node
 
 #firewall vars
-web1_ip: "192.168.56.108"
+web1_ip: "192.168.56.108" #ip of two servers to be used for wordpress installation
 web2_ip: "192.168.56.109"
 
 firewall_allowed_tcp_ports:
@@ -16,6 +16,7 @@ firewall_allowed_tcp_ports:
 firewall_allowed_udp_ports: []
 firewall_forwarded_tcp_ports: []
 firewall_forwarded_udp_ports: []
+#allows incoming traffic from both web servers on port 3306
 firewall_additional_rules:
   - "iptables -A INPUT -j DROP"
   - "iptables -A INPUT -p tcp --dport 3306 -s {{ web1_ip }} -j ACCEPT"
