@@ -6,9 +6,9 @@ Clone this repo:
 
 **Using Vagrant**
 
-```$ cd d3-assessment``
+```$ cd d3-assessment```
 
-```vagrant up```
+```$ vagrant up```
 
 - Put in appropriate IP addresses and path to ssh key of all 6 servers in ```inventory/hosts```
 
