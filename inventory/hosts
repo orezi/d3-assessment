@@ -1,13 +1,13 @@
 [haproxy]
-192.168.56.107 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
+192.168.56.107
 
 [wordpress]
-192.168.56.108 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
-192.168.56.109 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
+192.168.56.108
+192.168.56.109
 
 [master]
-192.168.56.110 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
+192.168.56.110
 
 [slaves]
-192.168.56.111 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
-192.168.56.112 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/orezi/.ssh/devops-ass
+192.168.56.111
+192.168.56.112

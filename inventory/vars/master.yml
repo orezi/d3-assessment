@@ -10,6 +10,10 @@ mysql_users:
     host: "%"
     password: wp_db_password
     priv: "*.*:ALL"
+  - name: master
+    host: "%"
+    password: wp_db_password
+    priv: "*.*:ALL"
 
 mysql_replication_role: 'master'
 mysql_server_id: "1"

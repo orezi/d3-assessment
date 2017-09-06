@@ -1,14 +1,14 @@
 mysql_root_password_update: yes
 mysql_databases:
-    - name: example_password
+    - name: wordpress
       collation: utf8_general_ci
       encoding: utf8
       replicate: 2
 
 mysql_users:
-  - name: example
+  - name: master
     host: "%"
-    password: example_password
+    password: wp_db_password
     priv: "*.*:ALL"
 
 mysql_server_id: "2"

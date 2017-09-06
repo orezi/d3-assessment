@@ -11,7 +11,5 @@
   tags:
     - database
   roles:
-    - role: firewall
-      become: yes
     - role: geerlingguy.mysql
       become: yes
