@@ -12,3 +12,4 @@ mysql_users:
     priv: "*.*:ALL"
 
 mysql_replication_role: 'master'
+mysql_server_id: "1"
