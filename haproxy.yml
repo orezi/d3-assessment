@@ -1,0 +1,15 @@
+- name: Load variables
+  hosts: haproxy
+  connection: local
+  gather_facts: False
+  tasks:
+    - include_vars: "{{ inventory_dir }}/vars/haproxy.yml"
+
+- name: Load database login credentials for the deployment
+  hosts: haproxy
+  user: vagrant
+  roles:
+    - role: firewall
+      become: yes
+    - role: haproxy_lb
+      become: yes

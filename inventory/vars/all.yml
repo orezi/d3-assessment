@@ -1,0 +1,22 @@
+mysql_replication_user:
+    name: master
+    host: "%"
+    password: wp_db_password
+    priv: "*.*:ALL"
+
+mysql_replication_master: '192.168.56.110'
+
+#firewall vars
+web1_ip: "192.168.56.108"
+web2_ip: "192.168.56.109"
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "3306"
+firewall_allowed_udp_ports: []
+firewall_forwarded_tcp_ports: []
+firewall_forwarded_udp_ports: []
+firewall_additional_rules:
+  - "iptables -A INPUT -j DROP"
+  - "iptables -A INPUT -p tcp --dport 3306 -s {{ web1_ip }} -j ACCEPT"
+  - "iptables -A INPUT -p tcp --dport 3306 -s {{ web2_ip }} -j ACCEPT"

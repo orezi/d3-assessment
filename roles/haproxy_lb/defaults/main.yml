@@ -1,0 +1,5 @@
+ha_repo: ppa:vbernat/haproxy-1.7
+port: 80
+balance_algorithm: roundrobin
+webserver1_IP: "192.168.56.108"
+webserver2_IP: "192.168.56.109"

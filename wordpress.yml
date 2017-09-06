@@ -1,0 +1,13 @@
+- name: Load variables
+  hosts: wordpress
+  connection: local
+  gather_facts: False
+  tasks:
+    - include_vars: "{{ inventory_dir }}/vars/wordpress.yml"
+
+- name: Install wordpress
+  hosts: wordpress
+  roles:
+    - role: firewall
+      become: yes
+    - role: wordpress

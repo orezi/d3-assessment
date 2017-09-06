@@ -1,0 +1,16 @@
+mysql_root_password_update: yes
+mysql_databases:
+    - name: example_password
+      collation: utf8_general_ci
+      encoding: utf8
+      replicate: 2
+
+mysql_users:
+  - name: example
+    host: "%"
+    password: example_password
+    priv: "*.*:ALL"
+
+mysql_server_id: "2"
+mysql_replication_master: '192.168.56.110'
+mysql_replication_role: 'slave'

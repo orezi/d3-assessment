@@ -1,0 +1,2 @@
+- include: install_base_packages.yml
+- include: install_wordpress.yml
